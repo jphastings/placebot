@@ -1,0 +1,14 @@
+= PlaceBot
+I've got one of these running for your demoing pleasure - I call it the campusBot, because it tweets about opening times of the various places on "my university campus":http://nottingham.ac.uk. You can find it at "@uoncampusbot":http://twitter.com/uoncampusbot.
+
+== Installation
+You'll need to create a settings file for all of this to run, you can create the default one with:
+	ruby placebot.rb
+This will run through the setup, but without actually doing anything. You can then look through the settings.yml file and edit the fields. If you don't know what you're doing, only change the username and password fields to the username and password of the twitter account you'll be using for your bot.
+
+Now edit the @add_places.rb@ script to add places to your bot! (I haven't made this yet! Keep your eyes peeled)
+
+Configure your serving computer (this can be your home computer if its always on and attached to the internet) to run this command every minute:
+	ruby checkForStatusChanges.rb
+And if you're accepting questions, run this command every 5 seconds:
+	ruby checkForQuestions.rb
